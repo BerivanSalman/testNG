@@ -1,0 +1,10 @@
+Bir testin birden fazla browserle calıstırılması anlamına gelir. Testlerin farklı browserlarda calısabiliyor
+olması lazımdır. Smoke testlerimizi hergün calıstırmak zorundayız. Bizim icin can alıcı işlevlerdir. Cross Browser testleri spesifik olarak belirlenmiş
+testlerin belirli aralıklarla her browserlarda calıstırılması istendiginde kullanılır. Mesela bazı testleri cross browser calısmak istiyoruz o zaman ayrı
+bir konfigurasyon yapmamız gerek. xml de düzenleme yaparız
+
+
+testleri calıstırmak istedigimizde normal driveri kullanırsak sorun oluyor configuration.properties den gidip alıyordu driverı. Onun yerine Parent olan
+TestBseCross da olusturulan driveri kullanırız. xml deki CrossBrowser neyse (chrome sa chrome, safariyse safari) onu TestBaseCrossa yollarız
+Sonra bu crossbrowserın degerine göre bizi DriverCrossa yollayacak. Oraya Chrome geldiyse chrome safari geldiyse safari gonderecek bize.
+Biz de bunu driver a atayacağız
